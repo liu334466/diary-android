@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">日记</string>
+    <string name="placeholder">日记 App 骨架已就绪</string>
+</resources>
