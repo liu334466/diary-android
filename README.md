@@ -1,5 +1,7 @@
 # 日记 Android App
 
+> 仓库：<https://github.com/liu334466/diary-android> ｜ 下载：[Releases](https://github.com/liu334466/diary-android/releases)
+
 极简日记应用：标题 + 富文本正文、分类、标签、全文搜索、日历回顾、本地备份与多主题。
 单 Activity + Navigation，Kotlin + XML + ViewBinding，Hilt + Room + DataStore，Material 3。
 
