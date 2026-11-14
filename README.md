@@ -60,8 +60,23 @@ adb install -r app/build/outputs/apk/debug/app-debug.apk
 
 Robolectric 单测使用真实 SQLite 文件验证迁移，避免只比对 schema。
 
-## 发布前待办
+## 安装到自己的手机
+
+当前定位是自用，直接用调试包即可，无需配置签名与上架素材：
+
+```bash
+gradle :app:assembleDebug
+adb install -r app/build/outputs/apk/debug/app-debug.apk
+```
+
+也可以把 `app-debug.apk` 传到手机，允许「未知来源安装」后直接安装。
+
+注意：debug 包使用本机 `~/.android/debug.keystore` 签名，在另一台电脑上构建的包无法覆盖安装（需先卸载，数据会丢失）。如需跨设备稳定升级，再按下面配置自己的签名。
+
+## 可选：仅在计划上架时执行
+
+以下三项不影响自用，做发布时才需要：
 
 1. 在 `local.properties` 配置签名（`RELEASE_STORE_FILE` / `RELEASE_STORE_PASSWORD` / `RELEASE_KEY_ALIAS` / `RELEASE_KEY_PASSWORD`），未配置时 release 包回退 debug 签名。
-2. 真机走查：编辑、导出、备份恢复、三套主题对比度。
-3. 商店素材与内测分发。
+2. 商店素材（截图、描述、隐私政策链接）与内测分发。
+3. 上架前真机走查：编辑、导出、备份恢复、三套主题对比度。
