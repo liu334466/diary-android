@@ -20,4 +20,13 @@ subprojects {
             exclude { element -> element.file.path.contains("/build/") }
         }
     }
+
+    // 单测失败时打印具体用例与堆栈，便于在 CI 日志里定位
+    tasks.withType<Test>().configureEach {
+        testLogging {
+            events("failed")
+            exceptionFormat =
+                org.gradle.api.tasks.testing.logging.TestExceptionFormat.FULL
+        }
+    }
 }
