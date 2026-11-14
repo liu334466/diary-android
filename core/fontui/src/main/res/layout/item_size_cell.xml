@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/ds_bg_cell"
+    android:gravity="center"
+    android:minHeight="64dp"
+    android:orientation="vertical"
+    android:layout_margin="4dp"
+    android:paddingStart="4dp"
+    android:paddingEnd="4dp">
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:text="四号"
+        android:textColor="?attr/dsColorInk" />
+
+    <TextView
+        android:id="@+id/sizeValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="14pt"
+        android:textColor="?attr/dsColorMuted"
+        android:textSize="10sp" />
+</LinearLayout>

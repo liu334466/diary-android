@@ -21,10 +21,22 @@ android {
     kotlinOptions {
         jvmTarget = "17"
     }
+
+    testOptions {
+        unitTests {
+            isIncludeAndroidResources = true
+        }
+    }
+}
+
+ksp {
+    // Room Schema 导出目录，迁移测试与版本比对以这里的 JSON 为准。
+    arg("room.schemaLocation", "$projectDir/schemas")
 }
 
 dependencies {
     implementation(project(":core:model"))
+    implementation(project(":core:richtext"))
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.room.runtime)
@@ -34,4 +46,10 @@ dependencies {
     implementation(libs.androidx.datastore.preferences)
     implementation(libs.hilt.android)
     ksp(libs.hilt.compiler)
+
+    testImplementation(libs.junit)
+    testImplementation(libs.androidx.test.core)
+    testImplementation(libs.androidx.room.testing)
+    testImplementation(libs.kotlinx.coroutines.test)
+    testImplementation(libs.robolectric)
 }

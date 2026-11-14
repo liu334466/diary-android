@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--
+      语义化颜色属性：所有页面、弹层与 drawable 只引用这些属性，
+      由具体主题（浅色 / 深色 / 暖纸）决定实际色值，避免主题切换时逐页改色。
+    -->
+    <attr name="dsColorBg" format="color" />
+    <attr name="dsColorBgSoft" format="color" />
+    <attr name="dsColorInk" format="color" />
+    <attr name="dsColorInk2" format="color" />
+    <attr name="dsColorMuted" format="color" />
+    <attr name="dsColorLine" format="color" />
+    <attr name="dsColorLineStrong" format="color" />
+    <attr name="dsColorDanger" format="color" />
+    <attr name="dsColorDangerSoft" format="color" />
+    <attr name="dsColorHighlight" format="color" />
+    <attr name="dsColorPressed" format="color" />
+</resources>

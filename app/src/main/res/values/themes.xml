@@ -1,6 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+    <!--
+      浅色主题：默认主题，也是设置里「浅色」模式的落地样式。
+      所有语义色都通过 dsColor* 属性下发，页面与 drawable 统一引用属性。
+    -->
     <style name="Theme.Diary" parent="Theme.Material3.Light.NoActionBar">
+        <item name="dsColorBg">@color/bg</item>
+        <item name="dsColorBgSoft">@color/bg_soft</item>
+        <item name="dsColorInk">@color/ink</item>
+        <item name="dsColorInk2">@color/ink_2</item>
+        <item name="dsColorMuted">@color/muted</item>
+        <item name="dsColorLine">@color/line</item>
+        <item name="dsColorLineStrong">@color/line_strong</item>
+        <item name="dsColorDanger">@color/danger</item>
+        <item name="dsColorDangerSoft">@color/danger_soft</item>
+        <item name="dsColorHighlight">@color/search_highlight</item>
+        <item name="dsColorPressed">@color/pressed</item>
+
         <item name="colorPrimary">@color/ink</item>
         <item name="colorOnPrimary">@color/bg</item>
         <item name="colorSurface">@color/bg</item>
@@ -9,5 +26,65 @@
         <item name="android:statusBarColor">@color/bg</item>
         <item name="android:windowLightStatusBar">true</item>
         <item name="android:navigationBarColor">@color/bg</item>
+    </style>
+
+    <!--
+      深色主题：深灰底 #121212。状态栏图标转为浅色，其余语义色整体反相。
+    -->
+    <style name="Theme.Diary.Dark" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="dsColorBg">@color/bg_dark</item>
+        <item name="dsColorBgSoft">@color/bg_soft_dark</item>
+        <item name="dsColorInk">@color/ink_dark</item>
+        <item name="dsColorInk2">@color/ink_2_dark</item>
+        <item name="dsColorMuted">@color/muted_dark</item>
+        <item name="dsColorLine">@color/line_dark</item>
+        <item name="dsColorLineStrong">@color/line_strong_dark</item>
+        <item name="dsColorDanger">@color/danger_dark</item>
+        <item name="dsColorDangerSoft">@color/danger_soft_dark</item>
+        <item name="dsColorHighlight">@color/search_highlight_dark</item>
+        <item name="dsColorPressed">@color/pressed_dark</item>
+
+        <item name="colorPrimary">@color/ink_dark</item>
+        <item name="colorOnPrimary">@color/bg_dark</item>
+        <item name="colorSurface">@color/bg_dark</item>
+        <item name="colorOnSurface">@color/ink_dark</item>
+        <item name="android:colorBackground">@color/bg_dark</item>
+        <item name="android:statusBarColor">@color/bg_dark</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:navigationBarColor">@color/bg_dark</item>
+    </style>
+
+    <!--
+      暖纸主题：底色 #F6F1E7，纸面偏暖、正文用暖调深褐。
+      与浅色主题同一套版式，只替换语义色，不改任何页面结构。
+    -->
+    <style name="Theme.Diary.Paper" parent="Theme.Material3.Light.NoActionBar">
+        <item name="dsColorBg">@color/bg_paper</item>
+        <item name="dsColorBgSoft">@color/bg_soft_paper</item>
+        <item name="dsColorInk">@color/ink_paper</item>
+        <item name="dsColorInk2">@color/ink_2_paper</item>
+        <item name="dsColorMuted">@color/muted_paper</item>
+        <item name="dsColorLine">@color/line_paper</item>
+        <item name="dsColorLineStrong">@color/line_strong_paper</item>
+        <item name="dsColorDanger">@color/danger_paper</item>
+        <item name="dsColorDangerSoft">@color/danger_soft_paper</item>
+        <item name="dsColorHighlight">@color/search_highlight_paper</item>
+        <item name="dsColorPressed">@color/pressed_paper</item>
+
+        <item name="colorPrimary">@color/ink_paper</item>
+        <item name="colorOnPrimary">@color/bg_paper</item>
+        <item name="colorSurface">@color/bg_paper</item>
+        <item name="colorOnSurface">@color/ink_paper</item>
+        <item name="android:colorBackground">@color/bg_paper</item>
+        <item name="android:statusBarColor">@color/bg_paper</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:navigationBarColor">@color/bg_paper</item>
+    </style>
+
+    <!-- 底部标签栏去掉 Material3 默认的选中胶囊，保持黑白极简。 -->
+    <style name="Widget.Diary.BottomNavIndicator" parent="">
+        <item name="android:color">@android:color/transparent</item>
+        <item name="android:width">0dp</item>
+        <item name="android:height">0dp</item>
     </style>
 </resources>

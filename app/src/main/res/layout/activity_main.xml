@@ -1,10 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.fragment.app.FragmentContainerView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/nav_host_fragment"
-    android:name="androidx.navigation.fragment.NavHostFragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/bg"
-    app:defaultNavHost="true"
-    app:navGraph="@navigation/nav_main" />
+    android:background="?attr/dsColorBg"
+    android:orientation="vertical">
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/nav_host_fragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="?attr/dsColorBg"
+        app:defaultNavHost="true"
+        app:navGraph="@navigation/nav_main" />
+
+    <View
+        android:id="@+id/navDivider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="?attr/dsColorLine" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="62dp"
+        android:background="?attr/dsColorBg"
+        android:backgroundTint="?attr/dsColorBg"
+        app:elevation="0dp"
+        app:itemActiveIndicatorStyle="@style/Widget.Diary.BottomNavIndicator"
+        app:itemIconTint="@color/ds_bottom_nav_color"
+        app:itemRippleColor="@android:color/transparent"
+        app:itemTextColor="@color/ds_bottom_nav_color"
+        app:labelVisibilityMode="labeled"
+        app:menu="@menu/bottom_nav" />
+</LinearLayout>

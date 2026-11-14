@@ -26,4 +26,8 @@ dependencies {
     implementation(project(":core:model"))
 
     implementation(libs.androidx.core.ktx)
+
+    testImplementation(libs.junit)
+    // JVM 单测中替代 Android 内置的 org.json 实现。
+    testImplementation(libs.org.json)
 }

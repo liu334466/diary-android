@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <!-- 导出文件只从应用缓存目录对外授权，不暴露私有数据目录。 -->
+    <cache-path
+        name="diary_exports"
+        path="diary_exports/" />
+
+    <!-- 崩溃日志只允许主动导出，不开放其他私有目录。 -->
+    <files-path
+        name="crash_logs"
+        path="logs/" />
+</paths>

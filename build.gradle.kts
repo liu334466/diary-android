@@ -4,4 +4,20 @@ plugins {
     alias(libs.plugins.kotlin.android) apply false
     alias(libs.plugins.ksp) apply false
     alias(libs.plugins.hilt) apply false
+    alias(libs.plugins.ktlint) apply false
+}
+
+/**
+ * 所有子模块统一接入 ktlint：`gradle ktlintCheck` 做静态检查，`gradle ktlintFormat` 自动修复。
+ * 跳过构建产物与 KSP/Room 生成的代码，只检查手写源码。
+ */
+subprojects {
+    apply(plugin = "org.jlleitschuh.gradle.ktlint")
+
+    configure<org.jlleitschuh.gradle.ktlint.KtlintExtension> {
+        android.set(true)
+        filter {
+            exclude { element -> element.file.path.contains("/build/") }
+        }
+    }
 }

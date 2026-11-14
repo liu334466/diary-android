@@ -14,7 +14,7 @@ data class Diary(
     val charCount: Int = 0,
     val createdAt: Long,
     val updatedAt: Long,
-    val deletedAt: Long? = null
+    val deletedAt: Long? = null,
 )
 
 /**
@@ -25,7 +25,16 @@ data class Category(
     val name: String,
     val sortOrder: Int = 0,
     val isSystem: Boolean = false,
-    val createdAt: Long
+    val createdAt: Long,
+)
+
+/**
+ * 标签领域模型，名称全局唯一。
+ */
+data class Tag(
+    val id: Long = 0L,
+    val name: String,
+    val createdAt: Long,
 )
 
 /**
@@ -36,7 +45,15 @@ data class FontAsset(
     val displayName: String,
     val fileName: String,
     val fileSize: Long = 0L,
-    val source: Int = 0,
-    val status: Int = 0,
-    val importedAt: Long
-)
+    val source: Int = SOURCE_BUILT_IN,
+    val status: Int = STATUS_OK,
+    val importedAt: Long,
+) {
+    companion object {
+        const val SOURCE_BUILT_IN = 0
+        const val SOURCE_IMPORTED = 1
+
+        const val STATUS_OK = 0
+        const val STATUS_INVALID = 1
+    }
+}

@@ -9,4 +9,81 @@
         android:name="com.diary.feature.diarylist.HomeFragment"
         android:label="@string/app_name" />
 
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.diary.feature.diarylist.SearchFragment"
+        android:label="搜索">
+        <deepLink app:uri="diary://search" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/calendarFragment"
+        android:name="com.diary.feature.diarylist.CalendarFragment"
+        android:label="日历">
+        <deepLink app:uri="diary://calendar" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/categoryFragment"
+        android:name="com.diary.feature.category.CategoryFragment"
+        android:label="分类" />
+
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.diary.feature.settings.SettingsFragment"
+        android:label="设置" />
+
+    <fragment
+        android:id="@+id/editorFragment"
+        android:name="com.diary.feature.editor.EditorFragment"
+        android:label="编辑">
+        <argument
+            android:name="diaryId"
+            app:argType="long"
+            android:defaultValue="0L" />
+        <deepLink app:uri="diary://editor/{diaryId}" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/readerFragment"
+        android:name="com.diary.feature.reader.ReaderFragment"
+        android:label="阅读">
+        <argument
+            android:name="diaryId"
+            app:argType="long"
+            android:defaultValue="0L" />
+        <deepLink app:uri="diary://reader/{diaryId}" />
+    </fragment>
+
+    <dialog
+        android:id="@+id/exportFragment"
+        android:name="com.diary.feature.export.ExportFragment"
+        android:label="导出">
+        <argument
+            android:name="diaryId"
+            app:argType="long"
+            android:defaultValue="0L" />
+        <deepLink app:uri="diary://export/{diaryId}" />
+    </dialog>
+
+    <fragment
+        android:id="@+id/fontManagementFragment"
+        android:name="com.diary.feature.fontsetting.FontManagementFragment"
+        android:label="字体管理">
+        <deepLink app:uri="diary://fonts" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/tagManagementFragment"
+        android:name="com.diary.feature.settings.TagManagementFragment"
+        android:label="标签管理">
+        <deepLink app:uri="diary://tags" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/trashFragment"
+        android:name="com.diary.feature.diarylist.TrashFragment"
+        android:label="回收站">
+        <deepLink app:uri="diary://trash" />
+    </fragment>
 </navigation>

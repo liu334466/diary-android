@@ -1,0 +1,20 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- 线装手帐：外框 + 三条书写线 + 书脊，白色线性风格，落在 72dp 安全区内。 -->
+    <path
+        android:pathData="M38,28 H74 a6,6 0 0 1 6,6 V74 a6,6 0 0 1 -6,6 H38 a6,6 0 0 1 -6,-6 V34 a6,6 0 0 1 6,-6 Z"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="4"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:fillColor="@android:color/transparent" />
+    <path
+        android:pathData="M44,28 V80 M54,44 H68 M54,56 H68 M54,68 H62"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="4"
+        android:strokeLineCap="round"
+        android:fillColor="@android:color/transparent" />
+</vector>

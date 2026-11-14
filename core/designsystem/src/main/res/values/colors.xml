@@ -1,10 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- 浅色主题色板 -->
     <color name="bg">#FFFFFF</color>
     <color name="bg_soft">#F7F7F6</color>
     <color name="ink">#111111</color>
     <color name="ink_2">#444444</color>
     <color name="muted">#8A8A8A</color>
     <color name="line">#E6E6E6</color>
+    <color name="line_strong">#CCCCCC</color>
     <color name="danger">#B3261E</color>
+    <color name="danger_soft">#FBF3F2</color>
+    <!-- 搜索结果高亮底色，保持中性灰阶不引入彩色。 -->
+    <color name="search_highlight">#EDEDED</color>
+    <color name="pressed">#EFEFEE</color>
+
+    <!-- 深色主题色板：底色 #121212，层级靠微弱明度差拉开 -->
+    <color name="bg_dark">#121212</color>
+    <color name="bg_soft_dark">#1C1C1C</color>
+    <color name="ink_dark">#EDEDED</color>
+    <color name="ink_2_dark">#B5B5B5</color>
+    <color name="muted_dark">#7F7F7F</color>
+    <color name="line_dark">#2A2A2A</color>
+    <color name="line_strong_dark">#3D3D3D</color>
+    <color name="danger_dark">#F2B8B5</color>
+    <color name="danger_soft_dark">#2A1B1B</color>
+    <color name="search_highlight_dark">#333333</color>
+    <color name="pressed_dark">#232323</color>
+
+    <!-- 暖纸主题色板：底色 #F6F1E7，纸面偏暖，正文用暖调深褐以降低刺眼感 -->
+    <color name="bg_paper">#F6F1E7</color>
+    <color name="bg_soft_paper">#EFE8D9</color>
+    <color name="ink_paper">#2A2620</color>
+    <color name="ink_2_paper">#4C443A</color>
+    <color name="muted_paper">#8C8272</color>
+    <color name="line_paper">#E3D9C6</color>
+    <color name="line_strong_paper">#CFC2AB</color>
+    <color name="danger_paper">#A8301F</color>
+    <color name="danger_soft_paper">#F4E7DF</color>
+    <color name="search_highlight_paper">#E9DFC9</color>
+    <color name="pressed_paper">#EDE5D3</color>
 </resources>
