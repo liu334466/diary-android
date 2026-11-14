@@ -144,7 +144,9 @@ Robolectric 单测使用真实 SQLite 文件验证迁移，避免只比对 schem
 
 ## 安装到自己的手机
 
-当前定位是自用，直接用调试包即可，无需配置签名与上架素材：
+直接下载：[diary-android-v1.0.0-debug.apk](dist/diary-android-v1.0.0-debug.apk)（debug 签名，16.7 MB），传到手机后允许「未知来源安装」即可。
+
+当前定位是自用，用调试包就够了，无需配置签名与上架素材；也可以自己构建：
 
 ```bash
 gradle :app:assembleDebug

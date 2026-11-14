@@ -12,3 +12,6 @@ captures/
 *.aab
 *.keystore
 *.jks
+
+# 发布用安装包：Release 附件上传受限，改为随仓库分发 dist/ 下的构建产物
+!dist/*.apk
