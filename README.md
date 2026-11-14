@@ -80,3 +80,9 @@ adb install -r app/build/outputs/apk/debug/app-debug.apk
 1. 在 `local.properties` 配置签名（`RELEASE_STORE_FILE` / `RELEASE_STORE_PASSWORD` / `RELEASE_KEY_ALIAS` / `RELEASE_KEY_PASSWORD`），未配置时 release 包回退 debug 签名。
 2. 商店素材（截图、描述、隐私政策链接）与内测分发。
 3. 上架前真机走查：编辑、导出、备份恢复、三套主题对比度。
+
+## 许可证
+
+本项目基于 [MIT License](LICENSE) 开源，可自由使用、修改与分发，请保留版权声明。
+
+自用安装包可从仓库的 Releases 页面下载（`app-debug.apk`），或按上文命令本地构建。
